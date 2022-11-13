@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .button {
+    @apply cursor-pointer text-[2rem] border-2 border-black outline-none bg-gray-400 hover:opacity-90;
+  }
+}
