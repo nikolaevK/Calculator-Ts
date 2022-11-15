@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateRows: {
-        row5: "repeat(5, minmax(6rem, auto))",
+        row5: "repeat(5, minmax(5rem, auto))",
       },
       gridTemplateColumns: {
-        col4: "repeat(4, minmax(6rem, auto))",
+        col4: "repeat(4, minmax(5rem, auto))",
       },
     },
   },
