@@ -5,12 +5,13 @@ const PARENTHESIS = /\((?<equation>[^\(\)]*)\)/;
 const MULTIPLY_DIVIDE =
   /(?<operand1>-?\d+)\s*(?<operation>[\*\/])\s*(?<operand2>-?\d+)/;
 // Looks for exponent sign in between operands
-const EXPONENT = /(?<operand1>\d+)\s*(?<operation>[\^])\s*(?<operand2>-?\d+)/;
+const EXPONENT = /(?<operand1>-?\d+)\s*(?<operation>[\^])\s*(?<operand2>-?\d+)/;
 // Looks for plus and minus in between operands
 const SUBTRACT_ADD =
-  /(?<operand1>-?\d+)\s*(?<operation>(?<!e)[\+-]+)\s*(?<operand2>\d+)/;
+  /(?<operand1>-?\d+)\s*(?<operation>[\+-]+)\s*(?<operand2>\d+)/;
 
 export function parse(equation: string): string {
+  console.log(equation);
   // Looks and matches parenthesis inside the equation
   if (equation.match(PARENTHESIS)) {
     const subEquation = equation.match(PARENTHESIS)?.groups?.equation;
