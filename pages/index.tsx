@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       setAnswer("Invalid Math Expression");
     } else {
       setAnswer(result);
+      setInput("");
     }
   }
 

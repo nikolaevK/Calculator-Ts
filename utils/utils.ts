@@ -69,3 +69,5 @@ function handleMath(groups: Record<string, string> | undefined): string {
   }
   return "";
 }
+
+// console.log(parse("5"));
